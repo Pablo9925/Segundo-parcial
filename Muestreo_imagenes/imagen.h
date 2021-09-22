@@ -13,12 +13,12 @@ class imagen
 {
 public:
     imagen(string filename);
-    void submuestreo();
+    void muestreo();
     ~imagen();
 private:
     QImage *im;
     int matrizR[leds][leds], matrizG[leds][leds], matrizB[leds][leds];
-    int dimx,dimy,centrox,centroy,x,y;
+    float dimx,dimy,centrox,centroy,x,y;
     map <int,int> coloresR;
     map <int,int> coloresG;
     map <int,int> coloresB;

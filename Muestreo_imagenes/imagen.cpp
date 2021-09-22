@@ -11,9 +11,10 @@ imagen::imagen(string filename)
     y=dimy/leds;
 }
 
-void imagen::submuestreo()
+void imagen::muestreo()
 {
-    int i,j,k,l,r,g,b,pixr,pixg,pixb;
+    int r,g,b,pixr,pixg,pixb;
+    float i,j,k,l;
     for(i=8;i<16;i++){
         for(j=8;j<16;j++){
             for(k=centrox+x*(i-8);k<(centrox+x*(i-7));k++){
@@ -65,9 +66,9 @@ void imagen::submuestreo()
             coloresR.clear();
             coloresG.clear();
             coloresB.clear();
-            matrizR[i][j]=pixr;
-            matrizG[i][j]=pixg;
-            matrizB[i][j]=pixb;
+            matrizR[int(i)][int(j)]=pixr;
+            matrizG[int(i)][int(j)]=pixg;
+            matrizB[int(i)][int(j)]=pixb;
         }
     }
     for(i=8;i<16;i++){
@@ -121,9 +122,9 @@ void imagen::submuestreo()
             coloresR.clear();
             coloresG.clear();
             coloresB.clear();
-            matrizR[i][j]=pixr;
-            matrizG[i][j]=pixg;
-            matrizB[i][j]=pixb;
+            matrizR[int(i)][int(j)]=pixr;
+            matrizG[int(i)][int(j)]=pixg;
+            matrizB[int(i)][int(j)]=pixb;
         }
     }
     for(i=7;i>=0;i--){
@@ -177,9 +178,9 @@ void imagen::submuestreo()
             coloresR.clear();
             coloresG.clear();
             coloresB.clear();
-            matrizR[i][j]=pixr;
-            matrizG[i][j]=pixg;
-            matrizB[i][j]=pixb;
+            matrizR[int(i)][int(j)]=pixr;
+            matrizG[int(i)][int(j)]=pixg;
+            matrizB[int(i)][int(j)]=pixb;
         }
     }
 
@@ -234,9 +235,9 @@ void imagen::submuestreo()
             coloresR.clear();
             coloresG.clear();
             coloresB.clear();
-            matrizR[i][j]=pixr;
-            matrizG[i][j]=pixg;
-            matrizB[i][j]=pixb;
+            matrizR[int(i)][int(j)]=pixr;
+            matrizG[int(i)][int(j)]=pixg;
+            matrizB[int(i)][int(j)]=pixb;
         }
     }
     int digi;
@@ -244,8 +245,8 @@ void imagen::submuestreo()
     cout<<"\n//////////////// Matriz pixeles rojos ////////////////"<<endl;
     for(i=0;i<16;i++){
         for(j=0;j<16;j++){
-            cout<<matrizR[i][j];
-            str=to_string(matrizR[i][j]);
+            cout<<matrizR[int(i)][int(j)];
+            str=to_string(matrizR[int(i)][int(j)]);
             digi=str.size();
             if(digi==1) cout<<"   ";
             else if(digi==2) cout<<"  ";
@@ -256,8 +257,8 @@ void imagen::submuestreo()
     cout<<"\n//////////////// Matriz pixeles verdes ////////////////"<<endl;
     for(i=0;i<16;i++){
         for(j=0;j<16;j++){
-            cout<<matrizG[i][j];
-            str=to_string(matrizG[i][j]);
+            cout<<matrizG[int(i)][int(j)];
+            str=to_string(matrizG[int(i)][int(j)]);
             digi=str.size();
             if(digi==1) cout<<"   ";
             else if(digi==2) cout<<"  ";
@@ -268,8 +269,8 @@ void imagen::submuestreo()
     cout<<"\n//////////////// Matriz pixeles azules ////////////////"<<endl;
     for(i=0;i<16;i++){
         for(j=0;j<16;j++){
-            cout<<matrizB[i][j];
-            str=to_string(matrizB[i][j]);
+            cout<<matrizB[int(i)][int(j)];
+            str=to_string(matrizB[int(i)][int(j)]);
             digi=str.size();
             if(digi==1) cout<<"   ";
             else if(digi==2) cout<<"  ";
