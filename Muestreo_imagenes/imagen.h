@@ -22,6 +22,7 @@ private:
     map <int,int> coloresR;
     map <int,int> coloresG;
     map <int,int> coloresB;
+    map<int,int>::iterator it;
 };
 
 #endif // IMAGEN_H

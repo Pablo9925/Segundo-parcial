@@ -11,4 +11,5 @@ int main()
     cout<<"Ingrese la ubicacion de la imagen: ";
     cin>>filename;
     imagen image(filename);
+    image.submuestreo();
 }
