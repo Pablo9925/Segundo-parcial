@@ -4,6 +4,7 @@
 #include <iostream>
 #include <map>
 #include <QImage>
+#include <fstream>
 
 #define leds 16
 
@@ -14,6 +15,7 @@ class imagen
 public:
     imagen(string filename);
     void muestreo();
+    void guardar_archivo();
     ~imagen();
 private:
     QImage *im;

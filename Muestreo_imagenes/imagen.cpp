@@ -280,6 +280,47 @@ void imagen::muestreo()
     }
 }
 
+void imagen::guardar_archivo()
+{
+    fstream ofs("Matrices.txt",ios::app);
+    ofs<<"MatrizR[16][16]=\n{";
+    for(int i=0;i<16;i++){
+        ofs<<"{";
+        for(int j=0;j<16;j++){
+            if(j!=0) ofs<<",";
+            ofs<<matrizR[int(i)][int(j)];
+        }
+        if(i==15) ofs<<"}";
+        else ofs<<"}, ";
+    }
+    ofs<<"}";
+
+    ofs<<"\nMatrizG[16][16]=\n{";
+    for(int i=0;i<16;i++){
+        ofs<<"{";
+        for(int j=0;j<16;j++){
+            if(j!=0) ofs<<",";
+            ofs<<matrizG[int(i)][int(j)];
+        }
+        if(i==15) ofs<<"}";
+        else ofs<<"}, ";
+    }
+    ofs<<"}";
+
+    ofs<<"\nMatrizB[16][16]=\n{";
+    for(int i=0;i<16;i++){
+        ofs<<"{";
+        for(int j=0;j<16;j++){
+            if(j!=0) ofs<<",";
+            ofs<<matrizB[int(i)][int(j)];
+        }
+        if(i==15) ofs<<"}";
+        else ofs<<"}, ";
+    }
+    ofs<<"}";
+    ofs.close();
+}
+
 imagen::~imagen()
 {
     delete im;
