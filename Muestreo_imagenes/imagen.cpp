@@ -245,8 +245,8 @@ void imagen::muestreo()
     cout<<"\n//////////////// Matriz pixeles rojos ////////////////"<<endl;
     for(i=0;i<16;i++){
         for(j=0;j<16;j++){
-            cout<<matrizR[int(i)][int(j)];
-            str=to_string(matrizR[int(i)][int(j)]);
+            cout<<matrizR[int(j)][int(i)];
+            str=to_string(matrizR[int(j)][int(i)]);
             digi=str.size();
             if(digi==1) cout<<"   ";
             else if(digi==2) cout<<"  ";
@@ -257,8 +257,8 @@ void imagen::muestreo()
     cout<<"\n//////////////// Matriz pixeles verdes ////////////////"<<endl;
     for(i=0;i<16;i++){
         for(j=0;j<16;j++){
-            cout<<matrizG[int(i)][int(j)];
-            str=to_string(matrizG[int(i)][int(j)]);
+            cout<<matrizG[int(j)][int(i)];
+            str=to_string(matrizG[int(j)][int(i)]);
             digi=str.size();
             if(digi==1) cout<<"   ";
             else if(digi==2) cout<<"  ";
@@ -269,8 +269,8 @@ void imagen::muestreo()
     cout<<"\n//////////////// Matriz pixeles azules ////////////////"<<endl;
     for(i=0;i<16;i++){
         for(j=0;j<16;j++){
-            cout<<matrizB[int(i)][int(j)];
-            str=to_string(matrizB[int(i)][int(j)]);
+            cout<<matrizB[int(j)][int(i)];
+            str=to_string(matrizB[int(j)][int(i)]);
             digi=str.size();
             if(digi==1) cout<<"   ";
             else if(digi==2) cout<<"  ";
@@ -288,7 +288,7 @@ void imagen::guardar_archivo()
         ofs<<"{";
         for(int j=0;j<16;j++){
             if(j!=0) ofs<<",";
-            ofs<<matrizR[int(i)][int(j)];
+            ofs<<matrizR[int(j)][int(i)];
         }
         if(i==15) ofs<<"}";
         else ofs<<"}, ";
@@ -300,7 +300,7 @@ void imagen::guardar_archivo()
         ofs<<"{";
         for(int j=0;j<16;j++){
             if(j!=0) ofs<<",";
-            ofs<<matrizG[int(i)][int(j)];
+            ofs<<matrizG[int(j)][int(i)];
         }
         if(i==15) ofs<<"}";
         else ofs<<"}, ";
@@ -312,7 +312,7 @@ void imagen::guardar_archivo()
         ofs<<"{";
         for(int j=0;j<16;j++){
             if(j!=0) ofs<<",";
-            ofs<<matrizB[int(i)][int(j)];
+            ofs<<matrizB[int(j)][int(i)];
         }
         if(i==15) ofs<<"}";
         else ofs<<"}, ";
