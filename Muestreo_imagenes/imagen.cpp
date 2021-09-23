@@ -283,7 +283,7 @@ void imagen::muestreo()
 void imagen::guardar_archivo()
 {
     fstream ofs("Matrices.txt",ios::app);
-    ofs<<"MatrizR[16][16]=\n{";
+    ofs<<"byte array[3][16][16]={{";
     for(int i=0;i<16;i++){
         ofs<<"{";
         for(int j=0;j<16;j++){
@@ -295,7 +295,7 @@ void imagen::guardar_archivo()
     }
     ofs<<"}";
 
-    ofs<<"\nMatrizG[16][16]=\n{";
+    ofs<<", {";
     for(int i=0;i<16;i++){
         ofs<<"{";
         for(int j=0;j<16;j++){
@@ -307,7 +307,7 @@ void imagen::guardar_archivo()
     }
     ofs<<"}";
 
-    ofs<<"\nMatrizB[16][16]=\n{";
+    ofs<<", {";
     for(int i=0;i<16;i++){
         ofs<<"{";
         for(int j=0;j<16;j++){
@@ -317,7 +317,7 @@ void imagen::guardar_archivo()
         if(i==15) ofs<<"}";
         else ofs<<"}, ";
     }
-    ofs<<"}";
+    ofs<<"}};";
     ofs.close();
 }
 
