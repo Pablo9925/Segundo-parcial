@@ -1,0 +1,6 @@
+1. Ejecutar el proyecto "Muestro_imagenes"
+2. Ingresar el nombre de la imagen a procesar. Ejemplo: Bandera.jpg
+3. Dirigirse al build del proyecto y abrir el archivo Matrices.txt
+4. Copiar el arreglo que se encuentra en el archivo
+5. Pegue el arreglo en el proyecto de tinkercad en la parte especificada
+6. Inicie la simulación del montaje
