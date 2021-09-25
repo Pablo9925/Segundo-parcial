@@ -5,11 +5,12 @@ using namespace std;
 
 int main()
 {
-    //ubicación: ../Muestreo_imagenes/Banderas/Brasil.jpg
+    //ubicación: ../Muestreo_imagenes/Banderas/.jpg
     remove("Matrices.txt");
-    string filename;
+    string im,filename="../Muestreo_imagenes/Banderas/";
     cout<<"Ingrese la ubicacion de la imagen: ";
-    cin>>filename;
+    cin>>im;
+    filename.append(im);
     imagen image(filename);
     image.muestreo();
     image.guardar_archivo();
