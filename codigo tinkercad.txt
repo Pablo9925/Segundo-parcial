@@ -9,8 +9,7 @@ int columna=0;
 void setup()
 {
   leds.begin();
-  for (int i=1;i<=LED_COUNT;i++){
-    columna++;
+  for (int i=0;i<LED_COUNT;i++){
     if(array[0][fila][columna]==array[1][fila][columna] && array[1][fila][columna]==array[2][fila][columna]){
       if(array[0][fila][columna]!=0)leds.setPixelColor(i, array[0][fila][columna], array[1][fila][columna],array[2][fila][columna]-1);
       else leds.setPixelColor(i, array[0][fila][columna], array[1][fila][columna],array[2][fila][columna]+1);
@@ -20,6 +19,7 @@ void setup()
     	columna=-1;
         fila++;
     }
+  	columna++;
   }
   leds.show();
 }
